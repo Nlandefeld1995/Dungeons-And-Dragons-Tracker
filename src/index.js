@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { Provider } from "react-redux";
-import store from "./store/store";
+import store from "./common/redux/store";
 
 const render = () => {
   const App = require("./App").default;
