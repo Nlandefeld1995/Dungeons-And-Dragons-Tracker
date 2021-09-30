@@ -1,0 +1,11 @@
+/* Pallet https://coolors.co/0b090a-161a1d-660708-a4161a-ba181b-e5383b-b1a7a6-d3d3d3-f5f3f4-ffffff */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+ html, body {
+	 height: 100%;
+	 background: #0B090A;
+	 overflow: hidden;
+	 color: #fff;
+	 font-family: 'Open Sans';
+	 font-size: 18px;
+}
