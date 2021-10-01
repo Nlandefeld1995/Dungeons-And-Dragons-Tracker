@@ -2,8 +2,8 @@ import * as React from "react";
 import * as commonStyles from "./common/styles/common.module.css";
 import * as appStyles from "./App.css";
 import * as classnames from "classnames/bind";
-import { ResizableDivWidth } from "./common/components/ResizableDivWidth";
-import { ResizableDivHeight } from "./common/components/ResizableDivHeight";
+import { ResizableDivWidth } from "./common/components/resizableComponents/ResizableDivWidth";
+import { ResizableDivHeight } from "./common/components/resizableComponents/ResizableDivHeight";
 const cx = classnames.bind({ ...commonStyles, ...appStyles });
 
 function App() {

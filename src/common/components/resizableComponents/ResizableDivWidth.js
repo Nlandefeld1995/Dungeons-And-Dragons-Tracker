@@ -1,7 +1,8 @@
 import * as React from "react";
-import * as commonStyles from "../styles/common.module.css";
+import * as commonStyles from "../../styles/common.module.css";
+import * as resizeStyles from "./Resizable.module.css";
 import * as classnames from "classnames/bind";
-const cx = classnames.bind(commonStyles);
+const cx = classnames.bind({...commonStyles,...resizeStyles});
 
 export const ResizableDivWidth = ({ innerDiv, inputWidth }) => {
   const [initialPos, setInitialPos] = React.useState(null);
