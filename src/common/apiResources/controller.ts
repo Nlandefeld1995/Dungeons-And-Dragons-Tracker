@@ -7,7 +7,9 @@ const myHeaders = () => {
     };
     return requestOptions;
   };
-  
+  const applicationId = "Ick76uw7eeBOumQ2QbiZFXWJkOo1J51BFR8XvGZr"
+  const jsKey = "6Cqkpr5Ji3UDBZqBaMoOhyRdecxx1btwhliTrvls"
+  // https://www.back4app.com/docs/react-native/parse-sdk/react-native-sdk
   export const getRequest = async (url: string) => {
     let requestOptions = myHeaders();
     requestOptions.method = "GET";
