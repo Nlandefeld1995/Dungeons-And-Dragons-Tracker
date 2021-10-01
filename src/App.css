@@ -9,3 +9,36 @@
 	 font-family: 'Open Sans';
 	 font-size: 18px;
 }
+ #root{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	/* overflow:scroll; */
+}
+
+.top-bar-div{
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 15vh;
+	border-bottom: 1px solid white;
+}
+.main-container{
+	display: flex;
+	position: relative;
+	height: 85vh;
+	width: 100vw;
+}
+
+.right-container{
+	position: relative;
+	height: 100vh;
+	float: left;
+	
+}
+.right-container-two{
+	min-height: 5vw;
+  max-height: 90vw;
+}
+
+
