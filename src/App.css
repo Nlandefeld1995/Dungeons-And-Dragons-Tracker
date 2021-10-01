@@ -3,9 +3,42 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
  html, body {
 	 height: 100%;
-	 background: #0B090A;
+	 background: #161A1D;
 	 overflow: hidden;
-	 color: #fff;
+	 color: #F5F3F4;
 	 font-family: 'Open Sans';
 	 font-size: 18px;
 }
+ #root{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	/* overflow:scroll; */
+}
+
+.top-bar-div{
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 15vh;
+	border-bottom: 1px solid #B1A7A6;
+}
+.main-container{
+	display: flex;
+	position: relative;
+	height: 85vh;
+	width: 100vw;
+}
+
+.right-container{
+	position: relative;
+	height: 100vh;
+	float: left;
+	
+}
+.right-container-two{
+	min-height: 5vw;
+  max-height: 90vw;
+}
+
+
