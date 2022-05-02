@@ -1,8 +1,9 @@
 .select-box{
-    display: inline-block;
-    width: 150px;
+    background: white;
+    display: inline-flex;
+    padding-right: 6px;
+    padding-left: 2px;
     align-items: center;
-    text-align: center;
 }
 .select-box-toggle{
     background-color: white;
@@ -41,12 +42,9 @@
 .arrow {
     margin-left: 4px;
     border: solid black;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3px;
-    position: relative;
-    right: 0px;
-    align-items: flex-end;
   }
   
   .down {
