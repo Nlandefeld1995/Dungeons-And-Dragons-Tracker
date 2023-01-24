@@ -1,18 +1,21 @@
 import * as React from "react";
-import { StoreView } from "./common/redux/globalStore";
-import { useSelector } from "./common/redux/reduxHooks";
-import { CreateCharacter } from "./mainComponents/CreateCharacter/CreateCharacter";
-import { CreateAccount } from "./mainComponents/CreateScreen/CreateAccount";
-import { CreateScreen } from "./mainComponents/CreateScreen/CreateScreen";
-import { MainScreen } from "./mainComponents/MainScreen/MainScreen";
-import { TitleBar } from "./mainComponents/titleBar/TitleBar";
+
+import {
+  BrowserRouter, Routes, Route, Navigate
+} from "react-router-dom";
 
 function App() {
-  const appView = useSelector(StoreView);
+
+ 
+
   return (
-    <div className="body">
-    TODO
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path='/' element={<Navigate to='/newCharacter'/>} />
+        <Route exact path='/newCharacter' element={<>Hello</>} />
+        <Route exact path='/:id' element={<>Redirect to specific character. IF logged in. Probably check if character exists in list of available characters from store. Store will hold current user and if they are logged in</>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
