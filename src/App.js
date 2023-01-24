@@ -11,11 +11,7 @@ function App() {
   const appView = useSelector(StoreView);
   return (
     <div className="body">
-      <TitleBar />
-      {appView === "home" && <CreateScreen />}
-      {appView === "main" && <MainScreen />}
-      {appView === "newAccount" && <CreateAccount />}
-      {appView === "createCharacter" && <CreateCharacter />}
+    TODO
     </div>
   );
 }
