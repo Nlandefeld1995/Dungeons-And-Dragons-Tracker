@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 
 //reducers
-import GlobalState from "./globalStore";
+import CharacterSlice from "./Character.slice";
 
 const rootReducer = combineReducers({
-  GlobalState
+  CharacterSlice
 });
 
 export default rootReducer;

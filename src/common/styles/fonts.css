@@ -1,0 +1,9 @@
+.boldTextOne {
+    cursor: pointer;
+    font-family: Roboto Condensed,Roboto,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 12px;
+    text-shadow: 1px 1px 0 #eaeaea, -1px -1px 0 #eaeaea, -1px 1px 0 #eaeaea, 1px -1px 0 #eaeaea;
+    text-transform: uppercase;
+}
