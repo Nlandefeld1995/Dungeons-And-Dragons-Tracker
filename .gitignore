@@ -91,3 +91,4 @@ chrome-user-data
 .vscode
 *.swp
 *.swonode_modules/
+node_modules/
