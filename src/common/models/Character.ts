@@ -15,11 +15,12 @@ export interface Character {
 }
 
 export interface Modifiers {
-  [key: string]: {
-    label: string;
+  [key: string]: Modifier
+}
+export interface Modifier {
+  label: string;
     total: number;
     id: string;
-  }
 }
 
 export const defaultCharacter: Character = {

@@ -1,13 +1,13 @@
-import React from "react";
 import classnames from "classnames/bind";
+import React from "react";
+import { Modifier } from "../../../models";
 import styles from "./ModiferItem.module.css";
-import { Modifiers } from "../../../models";
 
 const cx = classnames.bind(styles);
 const { useState, useEffect } = React;
 
 interface ModiferItemProps {
-  modifier: Modifiers;
+  modifier: Modifier;
   onChange: (key: string, newTotal: number) => void;
 }
 
