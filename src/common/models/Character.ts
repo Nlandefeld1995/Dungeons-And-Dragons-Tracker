@@ -11,4 +11,23 @@ export interface Character {
   playerName?: string;
   race?: string;
   xp?: number;
+  modifiers: Modifiers;
+}
+
+export interface Modifiers {
+  [key: string]: {
+    label: string;
+    total: number;
+    id: string;
+  }
+}
+
+export const defaultCharacter: Character = {
+  modifiers: {
+    str: {
+      label: "Strength",
+      total: 0,
+      id: "str"
+    }
+  }
 }

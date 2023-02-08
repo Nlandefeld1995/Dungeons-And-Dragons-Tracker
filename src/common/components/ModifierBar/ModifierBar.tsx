@@ -1,27 +1,24 @@
-import React from 'react'
+import React from "react";
 import classnames from "classnames/bind";
-import styles from './ModifierBar.module.css'
-import { Character } from '../../models';
-import { ModifierItem } from './ModifierItem';
-
+import styles from "./ModifierBar.module.css";
+import { Character } from "../../models";
+import { ModifierItem } from "./ModifierItem";
+import { useSelector } from "../../redux/reduxHooks";
+import { CharacterSelector } from "../../redux/Character.slice";
 
 const cx = classnames.bind(styles);
-const {useState, useEffect} = React
-const character: Character = {
-    modifiers: {
-        str: {
-            label: 'Strength',
-            total: 15,
-            id: 'str'
-        }
-    }
-}
+const { useState, useEffect } = React;
 
 export const ModifierBar = () => {
-
-
-
-    return <>{
-        Object.keys(character.modifiers).map(key=><ModifierItem modifier={character.modifiers[key]} onChange={(key, newTotal)=>{}}/>)
-    }</>
-}
+  const baseCharacter = useSelector(CharacterSelector);
+  return (
+    <>
+      {Object.keys(baseCharacter.modifiers).map((key) => (
+        <ModifierItem
+          modifier={baseCharacter.modifiers[key]}
+          onChange={(key, newTotal) => {}}
+        />
+      ))}
+    </>
+  );
+};
