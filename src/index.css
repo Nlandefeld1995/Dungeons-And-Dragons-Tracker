@@ -1,6 +1,17 @@
-.body{
-    height: 100vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-color: black;
+/* Can import css files to be used globally. Will use this for text formatting, flex commands and common sizing/indentation */
+@import "./common/styles/fonts.css";
+@import "./common/styles/common.css";
+@import "./common/styles/flex.css";
+
+
+
+/* Create custom colors here. 
+Example use: 
+.className{
+    border: 1px solid var(--blueBorder)
+}
+*/
+
+:root {
+  --blueBorder: #53a5c5;
 }
