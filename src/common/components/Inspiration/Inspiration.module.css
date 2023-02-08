@@ -1,0 +1,7 @@
+.inspirationArea{
+
+}
+.inspirationContainer{
+    border: 1px solid var(--blueBorder);
+    height: 24px;
+}
