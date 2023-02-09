@@ -1,7 +1,7 @@
 import classnames from "classnames/bind";
 import React from "react";
 import { Modifier } from "../../../models";
-import styles from "./ModiferItem.module.css";
+import styles from "./ModifierItem.module.css";
 
 const cx = classnames.bind(styles);
 const { useState, useEffect } = React;
