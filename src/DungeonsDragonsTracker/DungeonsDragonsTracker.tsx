@@ -1,7 +1,8 @@
-import React from 'react'
 import classnames from "classnames/bind";
-import styles from './DungeonsDragonsTracker.module.css'
+import React from 'react';
 import { Inspiration } from '../common/components/Inspiration';
+import { SavingThrows } from '../common/components/SavingThrows';
+import styles from './DungeonsDragonsTracker.module.css';
 
 const cx = classnames.bind(styles);
 const {useState, useEffect} = React
@@ -15,7 +16,7 @@ export const DungeonsDragonsTracker = () => {
         <div className={cx('mainBody')}>
             <div><div>ability scores</div><Inspiration /><div>hit points</div></div>
             <div>
-                <div>SavingThrows</div>
+                <SavingThrows />
                 <div>Senses</div>
                 <div>Proficencies & language</div>
             </div>

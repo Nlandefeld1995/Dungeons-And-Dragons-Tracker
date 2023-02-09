@@ -1,0 +1,5 @@
+.savingThrowRow{
+    line-height: 30px;
+    padding: 12px;
+    border: 1px solid var(--blueBorder)
+}

@@ -1,3 +1,6 @@
+import { Abilities, formatAbilityList } from "./abilities";
+import { Modifiers, formatModifierList } from "./modifier";
+import { SavingThrows, formatSavingThrows } from "./savingThrows";
 // Would like to keep alphabetized to easily find what we are looking for
 export interface Character {
   alignment?: string;
@@ -12,23 +15,13 @@ export interface Character {
   race?: string;
   xp?: number;
   modifiers: Modifiers;
-}
-
-export interface Modifiers {
-  [key: string]: Modifier
-}
-export interface Modifier {
-  label: string;
-    total: number;
-    id: string;
+  abilities: Abilities;
+  savingThrows: SavingThrows;
+  proficiencyBonus?: number
 }
 
 export const defaultCharacter: Character = {
-  modifiers: {
-    str: {
-      label: "Strength",
-      total: 0,
-      id: "str"
-    }
-  }
-}
+  modifiers: formatModifierList(),
+  abilities: formatAbilityList(),
+  savingThrows: formatSavingThrows()
+};
