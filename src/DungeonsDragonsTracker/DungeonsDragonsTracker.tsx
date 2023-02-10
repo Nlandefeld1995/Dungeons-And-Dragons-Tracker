@@ -1,7 +1,9 @@
-import React from 'react'
 import classnames from "classnames/bind";
-import styles from './DungeonsDragonsTracker.module.css'
+import React from 'react';
 import { Inspiration } from '../common/components/Inspiration';
+import { ModifierBar } from "../common/components/ModifierBar";
+import { SavingThrows } from '../common/components/SavingThrows';
+import styles from './DungeonsDragonsTracker.module.css';
 
 const cx = classnames.bind(styles);
 const {useState, useEffect} = React
@@ -13,9 +15,9 @@ export const DungeonsDragonsTracker = () => {
     return <div className={cx('trackerMain')}>
         <div className={cx('headerBar')}><div>Menu</div><div>character/player info </div><div> save button</div></div>
         <div className={cx('mainBody')}>
-            <div><div>ability scores</div><Inspiration /><div>hit points</div></div>
+            <div><ModifierBar/> <Inspiration /><div>hit points</div></div>
             <div>
-                <div>SavingThrows</div>
+                <SavingThrows />
                 <div>Senses</div>
                 <div>Proficencies & language</div>
             </div>
