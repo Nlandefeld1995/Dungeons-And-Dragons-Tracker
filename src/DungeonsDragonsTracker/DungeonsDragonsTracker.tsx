@@ -1,5 +1,6 @@
 import classnames from "classnames/bind";
 import React from "react";
+import { Abilities } from "../common/components/Abilities";
 import { Inspiration } from "../common/components/Inspiration";
 import { ModifierBar } from "../common/components/ModifierBar";
 import { SavingThrows } from "../common/components/SavingThrows";
@@ -26,7 +27,7 @@ export const DungeonsDragonsTracker = () => {
           <div>Senses</div>
           <div>Proficencies & language</div>
         </div>
-        <div>Skills</div>
+        <Abilities />
         <div>
           <div>
             <div>Initiative</div>

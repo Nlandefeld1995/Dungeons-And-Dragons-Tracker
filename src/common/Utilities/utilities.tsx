@@ -1,0 +1,1 @@
+export const calculateModifierBonus = (modifierTotal:number) => Math.floor((modifierTotal - 10) / 2)

@@ -1,10 +1,10 @@
-import React from "react";
 import classnames from "classnames/bind";
-import styles from "./ModifierBar.module.css";
+import React from "react";
 import { Character } from "../../models";
-import { ModifierItem } from "./ModifierItem";
-import { useSelector } from "../../redux/reduxHooks";
 import { CharacterSelector } from "../../redux/Character.slice";
+import { useSelector } from "../../redux/reduxHooks";
+import styles from "./ModifierBar.module.css";
+import { ModifierItem } from "./ModifierItem";
 
 const cx = classnames.bind(styles);
 const { useState, useEffect } = React;
@@ -15,6 +15,7 @@ export const ModifierBar = () => {
     <div className={cx("displayFlex", "flexGap-medium")}>
       {Object.keys(baseCharacter.modifiers).map((key) => (
         <ModifierItem
+          key={key}
           modifier={baseCharacter.modifiers[key]}
           onChange={(key, newTotal) => {}}
         />
