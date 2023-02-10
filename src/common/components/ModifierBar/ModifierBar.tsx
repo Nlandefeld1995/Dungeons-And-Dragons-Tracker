@@ -12,13 +12,13 @@ const { useState, useEffect } = React;
 export const ModifierBar = () => {
   const baseCharacter = useSelector(CharacterSelector);
   return (
-    <>
+    <div>
       {Object.keys(baseCharacter.modifiers).map((key) => (
         <ModifierItem
           modifier={baseCharacter.modifiers[key]}
           onChange={(key, newTotal) => {}}
         />
       ))}
-    </>
+    </div>
   );
 };
