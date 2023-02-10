@@ -1,6 +1,9 @@
 .text-align-center {
   text-align: center;
 }
+.noWrap{
+  white-space: nowrap;
+}
 .margin-bottom-xxsmall {
   margin-bottom: 2px;
 }

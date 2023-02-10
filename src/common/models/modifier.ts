@@ -6,31 +6,31 @@ export interface Modifiers {
 export interface Modifier {
   label: string;
   total: number;
-  id: ModifierTypes;
+  id: string;
 }
 
 export enum ModifierTypes{
-  STR,
-  DEX,
-  CON,
-  INT,
-  WIS,
-  CHA
+  STR = 'STR',
+  DEX = 'DEX',
+  CON = 'CON',
+  INT = 'INT',
+  WIS = 'WIS',
+  CHA = 'CHA'
 }
 
-export const modifierList: {label: string, type: ModifierTypes}[] = [
-  {label:"Strength", type: ModifierTypes.STR}, 
-  {label:"Dexterity", type: ModifierTypes.DEX}, 
-  {label:"Constitution", type: ModifierTypes.CON}, 
-  {label:"Intelligence", type: ModifierTypes.INT}, 
-  {label:"Wisdom", type: ModifierTypes.WIS}, 
-  {label:"Charisma", type: ModifierTypes.CHA}
+export const modifierList: {label: string, id: string}[] = [
+  {label:"Strength", id: ModifierTypes.STR}, 
+  {label:"Dexterity", id: ModifierTypes.DEX}, 
+  {label:"Constitution", id: ModifierTypes.CON}, 
+  {label:"Intelligence", id: ModifierTypes.INT}, 
+  {label:"Wisdom", id: ModifierTypes.WIS}, 
+  {label:"Charisma", id: ModifierTypes.CHA}
 ]
 
 export const formatModifierList = () => {
   let newModifierList:Modifiers = {}
   modifierList.forEach(mod =>{
-    newModifierList[mod.type] = {label: mod.label, total:0, id: mod.type}
+    newModifierList[mod.id] = {...mod, total:0}
   })
   return newModifierList
 }

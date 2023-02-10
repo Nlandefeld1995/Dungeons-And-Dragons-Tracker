@@ -1,5 +1,6 @@
 import classnames from "classnames/bind";
 import React from "react";
+import { calculateModifierBonus } from "../../../Utilities";
 import { Modifier } from "../../../models";
 import styles from "./ModifierItem.module.css";
 
@@ -15,7 +16,7 @@ export const ModifierItem: React.FC<ModifierItemProps> = ({
   modifier,
   onChange,
 }) => {
-  const modifierValue = Math.floor((modifier.total - 10) / 2);
+  const modifierValue = calculateModifierBonus(modifier.total ?? 0);
   return (
     <div className={cx("text-align-center", styles.modifierItemContainer)}>
       <div>{modifier.label}</div>

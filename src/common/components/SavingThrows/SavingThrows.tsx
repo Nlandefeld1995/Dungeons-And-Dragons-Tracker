@@ -10,24 +10,33 @@ const { useState, useEffect } = React;
 
 export const SavingThrows = () => {
   const baseCharacter = useSelector(CharacterSelector);
-
+  const { savingThrows, proficiencyBonus, modifiers } = baseCharacter;
   return (
-    <div className={cx('displayFlex', 'flexColumn',styles.savingThrowsContainer,'flexAlignItemsCenter')}>
     <div
       className={cx(
-        "displayFlex",
-        "height-200",
         "flexColumn",
-        "flexWrap",
-        "width-250"
+        styles.savingThrowsContainer,
+        "flexAlignItemsCenter"
       )}
     >
-      {Object.entries(baseCharacter.savingThrows).map(([key, savingThrow]) => (
-        <SavingThrowRow savingThrow={savingThrow} />
-      ))}
-      
-    </div>
-    <div className={cx('boldTextOne')}>Saving Throw Modifiers</div>
+      <div
+        className={cx(
+          "height-200",
+          "flexColumn",
+          "flexWrap",
+          "width-250"
+        )}
+      >
+        {Object.entries(savingThrows).map(([key, savingThrow]) => (
+          <SavingThrowRow
+            key={key}
+            savingThrow={savingThrow}
+            modifier={modifiers[savingThrow.id]}
+            proficiencyBonus={proficiencyBonus ?? 0}
+          />
+        ))}
+      </div>
+      <div className={cx("boldTextOne")}>Saving Throw Modifiers</div>
     </div>
   );
 };
