@@ -12,7 +12,7 @@ const { useState, useEffect } = React;
 export const ModifierBar = () => {
   const baseCharacter = useSelector(CharacterSelector);
   return (
-    <div>
+    <div className={cx("displayFlex", "flexGap-medium")}>
       {Object.keys(baseCharacter.modifiers).map((key) => (
         <ModifierItem
           modifier={baseCharacter.modifiers[key]}

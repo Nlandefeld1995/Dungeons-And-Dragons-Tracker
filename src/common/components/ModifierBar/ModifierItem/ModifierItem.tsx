@@ -17,10 +17,10 @@ export const ModifierItem: React.FC<ModifierItemProps> = ({
 }) => {
   const modifierValue = Math.floor((modifier.total - 10) / 2);
   return (
-    <div>
+    <div className={cx("text-align-center", styles.modifierItemContainer)}>
       <div>{modifier.label}</div>
       <div>{modifierValue}</div>
-      <div>{modifier.total}</div>
+      <div className={cx(styles.modifierItemTotal)}>{modifier.total}</div>
     </div>
   );
 };

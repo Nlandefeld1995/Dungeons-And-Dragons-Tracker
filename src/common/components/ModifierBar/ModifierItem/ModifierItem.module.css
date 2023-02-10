@@ -1,0 +1,13 @@
+.modifierItemContainer {
+  border: 1px solid var(--blueBorder);
+  padding: 12px;
+  padding-bottom: 0px;
+}
+.modifierItemTotal {
+  border: 1px solid var(--blueBorder);
+  border-radius: 50%;
+  height: 25px;
+  width: 33px;
+  margin-bottom: -1.5px;
+  display: inline-block;
+}
