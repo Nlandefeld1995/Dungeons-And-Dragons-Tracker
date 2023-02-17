@@ -19,24 +19,26 @@ export const DungeonsDragonsTracker = () => {
         <div>character/player info </div>
         <div> save button</div>
       </div>
-      <div className={cx("mainBody")}>
-        <div>
+      <div className={cx("flexColumn", 'flexJustifyContentSpaceEvenly')}>
+        <div className={cx("displayFlex", styles.rowOne, 'flexJustifyContentSpaceEvenly')}>
           <ModifierBar /> <Inspiration />
           <div>hit points</div>
         </div>
-        <div>
-          <SavingThrows />
-          <Senses />
-          <ProfLanguage />
-        </div>
-        <Abilities />
-        <div>
-          <div>
-            <div>Initiative</div>
-            <div>Armor class</div>
-            <div>Defenses / conditions</div>
+        <div className={cx("displayFlex", 'flexJustifyContentSpaceEvenly')}>
+          <div className={cx("flexColumn", 'flexJustifyContentSpaceEvenly')}>
+            <SavingThrows />
+            <Senses />
+            <ProfLanguage />
           </div>
-          <div>ActionTable TBD</div>
+          <Abilities />
+          <div className={cx("flexColumn", 'flexJustifyContentSpaceEvenly')}>
+            <div className={cx("displayFlex")}>
+              <div>Initiative</div>
+              <div>Armor class</div>
+              <div>Defenses / conditions</div>
+            </div>
+            <div>ActionTable TBD</div>
+          </div>
         </div>
       </div>
     </div>
