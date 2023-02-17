@@ -17,7 +17,11 @@ export interface Character {
   modifiers: Modifiers;
   abilities: Abilities;
   savingThrows: SavingThrows;
-  proficiencyBonus?: number
+  proficiencyBonus?: number;
+  profArmor?: string[];
+  profWeapons?: string[];
+  profTools?: string[];
+  profLanguages?: string[]
 }
 
 export const defaultCharacter: Character = {

@@ -3,7 +3,9 @@ import React from "react";
 import { Abilities } from "../common/components/Abilities";
 import { Inspiration } from "../common/components/Inspiration";
 import { ModifierBar } from "../common/components/ModifierBar";
+import { ProfLanguage } from "../common/components/ProfLanguage";
 import { SavingThrows } from "../common/components/SavingThrows";
+import { Senses } from "../common/components/Senses";
 import styles from "./DungeonsDragonsTracker.module.css";
 
 const cx = classnames.bind(styles);
@@ -24,8 +26,8 @@ export const DungeonsDragonsTracker = () => {
         </div>
         <div>
           <SavingThrows />
-          <div>Senses</div>
-          <div>Proficencies & language</div>
+          <Senses />
+          <ProfLanguage />
         </div>
         <Abilities />
         <div>
@@ -36,20 +38,6 @@ export const DungeonsDragonsTracker = () => {
           </div>
           <div>ActionTable TBD</div>
         </div>
-      </div>
-      <div>
-        <div>SavingThrows</div>
-        <div>Senses</div>
-        <div>Proficencies & language</div>
-      </div>
-      <div>Skills</div>
-      <div>
-        <div>
-          <div>Initiative</div>
-          <div>Armor class</div>
-          <div>Defenses / conditions</div>
-        </div>
-        <div>ActionTable TBD</div>
       </div>
     </div>
   );
