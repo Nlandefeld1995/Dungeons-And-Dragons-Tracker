@@ -35,3 +35,6 @@
 .flexGap-xxlarge {
   gap: 24px;
 }
+.flexJustifyContentSpaceEvenly{
+  justify-content: space-evenly;
+}

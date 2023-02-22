@@ -1,0 +1,16 @@
+.sensesContainer {
+  padding: 12px;
+  border: 1px solid var(--blueBorder);
+}
+.pasWisdomScore {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--blueBorder);
+  border-radius: 50%;
+}
+
+.pasWisdomText {
+  padding: 6px;
+  border: 1px solid var(--blueBorder);
+  text-align: center;
+}

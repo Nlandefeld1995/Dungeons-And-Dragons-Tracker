@@ -3,7 +3,9 @@ import React from "react";
 import { Abilities } from "../common/components/Abilities";
 import { Inspiration } from "../common/components/Inspiration";
 import { ModifierBar } from "../common/components/ModifierBar";
+import { ProfLanguage } from "../common/components/ProfLanguage";
 import { SavingThrows } from "../common/components/SavingThrows";
+import { Senses } from "../common/components/Senses";
 import styles from "./DungeonsDragonsTracker.module.css";
 
 const cx = classnames.bind(styles);
@@ -17,39 +19,27 @@ export const DungeonsDragonsTracker = () => {
         <div>character/player info </div>
         <div> save button</div>
       </div>
-      <div className={cx("mainBody")}>
-        <div>
+      <div className={cx("flexColumn", 'flexJustifyContentSpaceEvenly')}>
+        <div className={cx("displayFlex", styles.rowOne, 'flexJustifyContentSpaceEvenly')}>
           <ModifierBar /> <Inspiration />
           <div>hit points</div>
         </div>
-        <div>
-          <SavingThrows />
-          <div>Senses</div>
-          <div>Proficencies & language</div>
-        </div>
-        <Abilities />
-        <div>
-          <div>
-            <div>Initiative</div>
-            <div>Armor class</div>
-            <div>Defenses / conditions</div>
+        <div className={cx("displayFlex", 'flexJustifyContentSpaceEvenly')}>
+          <div className={cx("flexColumn", 'flexJustifyContentSpaceEvenly')}>
+            <SavingThrows />
+            <Senses />
+            <ProfLanguage />
           </div>
-          <div>ActionTable TBD</div>
+          <Abilities />
+          <div className={cx("flexColumn", 'flexJustifyContentSpaceEvenly')}>
+            <div className={cx("displayFlex")}>
+              <div>Initiative</div>
+              <div>Armor class</div>
+              <div>Defenses / conditions</div>
+            </div>
+            <div>ActionTable TBD</div>
+          </div>
         </div>
-      </div>
-      <div>
-        <div>SavingThrows</div>
-        <div>Senses</div>
-        <div>Proficencies & language</div>
-      </div>
-      <div>Skills</div>
-      <div>
-        <div>
-          <div>Initiative</div>
-          <div>Armor class</div>
-          <div>Defenses / conditions</div>
-        </div>
-        <div>ActionTable TBD</div>
       </div>
     </div>
   );
